@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back"
+    tools:context=".fragmentClasses.ThumbNailFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ProgressBar
+            android:id="@+id/progressThumb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            />
+        <RelativeLayout
+            android:id="@+id/relAll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                >
+                <ImageView
+                    android:id="@+id/backThumb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_arrow_back_24"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    />
+                <TextView
+                    android:id="@+id/titleThumb"
+                    android:layout_width="250dp"
+                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
+                    android:text="Lucifer"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/text_color"
+                    android:fontFamily="@font/nunitobold"
+                    android:layout_centerVertical="true"
+                    android:textSize="18sp"
+                    android:gravity="center_horizontal" />
+            </RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerThumb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

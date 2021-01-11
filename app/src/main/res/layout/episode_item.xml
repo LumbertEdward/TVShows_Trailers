@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearEp"
+    android:orientation="vertical"
+    android:background="@color/back"
+    android:layout_margin="2dp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="134dp"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:layout_width="134dp"
+            android:layout_height="220dp"
+            app:cardBackgroundColor="@color/back"
+            app:cardCornerRadius="10dp"
+            >
+            <ImageView
+                android:id="@+id/imgEpisode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/titleEpisode"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/nunitobold"
+                android:maxLines="1"
+                android:text="Reloading"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/numberEpisode"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/nunitobold"
+                android:maxLines="1"
+                android:text="Episode 1"
+                android:layout_marginTop="3dp"
+                android:layout_below="@id/titleEpisode"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/lin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/numberEpisode"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/ic_baseline_star_24" />
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/ic_baseline_star_24" />
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/ic_baseline_star_24" />
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/ic_baseline_star_24" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

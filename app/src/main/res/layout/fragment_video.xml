@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back"
+    tools:context=".fragmentClasses.VideoFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            >
+            <ImageView
+                android:id="@+id/backVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20sp"
+                />
+            <TextView
+                android:id="@+id/titleVideo"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/text_color"
+                android:fontFamily="@font/nunitobold"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="Lucifer"
+                android:gravity="center_horizontal" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/frameVideo"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+
+</FrameLayout>

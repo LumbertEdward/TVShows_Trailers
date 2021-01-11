@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back"
+    tools:context=".fragmentClasses.GenreFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ProgressBar
+            android:id="@+id/progressGen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            />
+        <RelativeLayout
+            android:id="@+id/allGen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                android:id="@+id/errorMes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sorry!! No Result Matches The Genre"
+                android:textColor="@android:color/darker_gray"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/nunitoregular"
+                android:textSize="20sp"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerGen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

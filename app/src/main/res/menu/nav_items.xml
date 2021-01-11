@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/ic_outline_home_24"
+        />
+    <item android:id="@+id/today"
+        android:title="TV Airing Today"
+        android:icon="@drawable/ic_outline_airplay_24"
+        />
+    <item android:id="@+id/air"
+        android:title="TV On Air"
+        android:icon="@drawable/ic_baseline_live_tv_24"
+        />
+    <item android:id="@+id/popNav"
+        android:title="Popular Shows"
+        android:icon="@drawable/ic_baseline_video_library_24"
+        />
+    <item android:id="@+id/top"
+        android:title="Top Rated Shows"
+        android:icon="@drawable/ic_outline_featured_play_list_24"
+        />
+
+</menu>

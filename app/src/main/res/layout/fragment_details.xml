@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/back"
+    tools:context=".fragmentClasses.DetailsFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ProgressBar
+            android:id="@+id/progressDet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+        <ScrollView
+            android:id="@+id/scrollDet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <ImageView
+                        android:id="@+id/imgDet"
+                        android:layout_width="match_parent"
+                        android:layout_height="550dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/cover1"
+                        />
+                    <ImageView
+                        android:id="@+id/imgBackDet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_arrow_back_24"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="20dp"
+                        />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
+                    <TextView
+                        android:id="@+id/titleDet"
+                        android:layout_width="235dp"
+                        android:layout_height="wrap_content"
+                        android:text="JOKER"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/robotobold"
+                        android:textSize="25sp"
+                        android:layout_marginBottom="7dp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/genreDet"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        >
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/ic_baseline_star_24"
+                            android:layout_gravity="center_vertical"
+                            />
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/ic_baseline_star_24"
+                            android:layout_gravity="center_vertical"
+                            />
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/ic_baseline_star_24"
+                            android:layout_gravity="center_vertical"
+                            />
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/ic_baseline_star_24"
+                            android:layout_gravity="center_vertical"
+                            />
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/ic_baseline_star_24"
+                            android:layout_gravity="center_vertical"
+                            />
+                        <TextView
+                            android:id="@+id/rateDet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7.5"
+                            android:textColor="@android:color/darker_gray"
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/nunitobold"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp"
+                    >
+                    <ImageView
+                        android:id="@+id/playVid"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_baseline_play_circle_filled_24"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Play Trailer"
+                        android:textColor="@android:color/darker_gray"
+                        android:fontFamily="@font/nunitobold"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15sp"
+                        android:layout_gravity="center_vertical"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        >
+                        <TextView
+                            android:layout_width="5dp"
+                            android:layout_height="20dp"
+                            android:background="@color/text_color"
+                            android:layout_centerVertical="true"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Overview"
+                            android:textColor="@color/text_color"
+                            android:fontFamily="@font/nunitobold"
+                            android:layout_marginLeft="18dp"
+                            android:textSize="16sp"
+                            />
+                    </RelativeLayout>
+
+
+
+                    <TextView
+                        android:id="@+id/overviewDet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hello there"
+                        android:textColor="@android:color/darker_gray"
+                        android:fontFamily="@font/nunitoregular"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="5dp"
+                        />
+
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    >
+                    <TextView
+                        android:layout_width="5dp"
+                        android:layout_height="20dp"
+                        android:background="@color/text_color"
+                        android:layout_centerVertical="true"
+                        />
+                    <TextView
+                        android:id="@+id/seasonsNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Seasons (4)"
+                        android:textColor="@color/text_color"
+                        android:fontFamily="@font/nunitobold"
+                        android:textSize="16sp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_centerVertical="true"
+                        />
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/seasonsGenre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:layout_width="5dp"
+                            android:layout_height="20dp"
+                            android:background="@color/text_color"
+                            android:layout_centerVertical="true"
+                            />
+
+                        <TextView
+                            android:id="@+id/first"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="First Air Date"
+                            android:textColor="@color/text_color"
+                            android:fontFamily="@font/nunitobold"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="18dp"
+                            android:layout_centerVertical="true"
+                            />
+
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/firstDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/first"
+                        android:textColor="@android:color/darker_gray"
+                        android:fontFamily="@font/nunitobold"
+                        android:text="12-12-2020"
+                        android:layout_marginTop="5dp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        >
+                        <TextView
+                            android:layout_width="5dp"
+                            android:layout_height="20dp"
+                            android:background="@color/text_color"
+                            android:layout_centerVertical="true"
+                            />
+                        <TextView
+                            android:id="@+id/last"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Last Air Date"
+                            android:textColor="@color/text_color"
+                            android:fontFamily="@font/nunitobold"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="18dp"
+                            android:layout_centerVertical="true"
+                            />
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/lastDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/darker_gray"
+                        android:fontFamily="@font/nunitobold"
+                        android:text="12-12-2020"
+                        android:layout_marginTop="5dp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <TextView
+                            android:layout_width="5dp"
+                            android:layout_height="20dp"
+                            android:background="@color/text_color"
+                            android:layout_centerVertical="true"
+                            />
+                        <TextView
+                            android:id="@+id/next"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Next Episode To Air"
+                            android:textColor="@color/text_color"
+                            android:fontFamily="@font/nunitobold"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="18dp"
+                            android:layout_centerVertical="true"
+                            />
+
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/nextDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/darker_gray"
+                        android:fontFamily="@font/nunitobold"
+                        android:text="12-12-2020"
+                        android:layout_marginTop="5dp"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+
+
+</FrameLayout>

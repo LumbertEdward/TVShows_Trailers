@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back"
+    tools:context=".fragmentClasses.HomeFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ProgressBar
+            android:id="@+id/progressHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <LinearLayout
+                    android:id="@+id/linearAll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerPopHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="horizontal"
+                        />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="15dp"
+                        >
+                        <TextView
+                            android:layout_width="5dp"
+                            android:layout_height="20dp"
+                            android:background="@color/text_color"
+                            android:layout_centerVertical="true"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Airing Today"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/nunitosemibold"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="18dp"
+                            />
+                        <TextView
+                            android:id="@+id/txtToday"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="See All"
+                            android:textColor="@android:color/darker_gray"
+                            android:fontFamily="@font/nunitosemibold"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true" />
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerNowHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="15dp"
+                        >
+                        <TextView
+                            android:layout_width="5dp"
+                            android:layout_height="20dp"
+                            android:background="@color/text_color"
+                            android:layout_centerVertical="true"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="On Air"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/nunitosemibold"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="18dp"
+                            />
+                        <TextView
+                            android:id="@+id/txtAir"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="See All"
+                            android:textColor="@android:color/darker_gray"
+                            android:fontFamily="@font/nunitosemibold"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true" />
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerAirHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="15dp"
+                        >
+                        <TextView
+                            android:layout_width="5dp"
+                            android:layout_height="20dp"
+                            android:background="@color/text_color"
+                            android:layout_centerVertical="true"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Top Rated"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/nunitosemibold"
+                            android:textSize="16sp"
+                            android:layout_marginLeft="18dp"
+                            />
+                        <TextView
+                            android:id="@+id/txtTopR"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="See All"
+                            android:textColor="@android:color/darker_gray"
+                            android:fontFamily="@font/nunitosemibold"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true" />
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerTopHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+
+
+
+
+</FrameLayout>
