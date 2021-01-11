@@ -24,7 +24,6 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class GenreFragment : Fragment() {
-    private val key: String = "bfb9dfa7c6ccc29b4bdee1ec785dcb7c"
     private val language = "en-US"
     private val page = 1
     private var isLoading: Boolean = false
@@ -95,7 +94,7 @@ class GenreFragment : Fragment() {
 
     private fun loadFirstItem() {
         genreFragmentInterface = GenreFragmentRetrofit.getMRetrofit().create(GenreFragmentInterface::class.java)
-        var call: Call<PopularAll> = genreFragmentInterface.getPopularData(key, language, CURRENT_PAGE)
+        var call: Call<PopularAll> = genreFragmentInterface.getPopularData(Constants.key, language, CURRENT_PAGE)
         call.enqueue(object : Callback<PopularAll>{
             override fun onFailure(call: Call<PopularAll>, t: Throwable) {
                 relAll.visibility = View.GONE
@@ -154,7 +153,7 @@ class GenreFragment : Fragment() {
 
     private fun loadMoreGenreItems() {
         genreFragmentInterface = GenreFragmentRetrofit.getMRetrofit().create(GenreFragmentInterface::class.java)
-        var call: Call<PopularAll> = genreFragmentInterface.getPopularData(key, language, CURRENT_PAGE)
+        var call: Call<PopularAll> = genreFragmentInterface.getPopularData(Constants.key, language, CURRENT_PAGE)
         call.enqueue(object : Callback<PopularAll>{
             override fun onFailure(call: Call<PopularAll>, t: Throwable) {
                 progressBar.visibility = View.VISIBLE

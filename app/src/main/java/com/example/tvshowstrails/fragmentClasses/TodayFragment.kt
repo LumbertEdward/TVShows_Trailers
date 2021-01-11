@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tvshowstrails.PopularAdapter
 import com.example.tvshowstrails.R
+import com.example.tvshowstrails.dataClasses.Constants
 import com.example.tvshowstrails.dataClasses.Popular
 import com.example.tvshowstrails.dataClasses.PopularAll
 import com.example.tvshowstrails.dataClasses.ScrollingRecycler
@@ -23,7 +24,6 @@ import retrofit2.Response
 
 
 class TodayFragment : Fragment() {
-    private val key: String = "bfb9dfa7c6ccc29b4bdee1ec785dcb7c"
     private val language = "en-US"
     private val page = 1
     private var TOTAL_PAGES = 10
@@ -76,7 +76,7 @@ class TodayFragment : Fragment() {
 
     private fun getTopData() {
         todayInterface = TodayRetrofit.getRetrofit().create(TodayInterface::class.java)
-        var call: Call<PopularAll> = todayInterface.getShows(key, language, CURRENT_PAGE)
+        var call: Call<PopularAll> = todayInterface.getShows(Constants.key, language, CURRENT_PAGE)
         call.enqueue(object : Callback<PopularAll>{
             override fun onFailure(call: Call<PopularAll>, t: Throwable) {
                 progressBar.visibility = View.VISIBLE
@@ -103,7 +103,7 @@ class TodayFragment : Fragment() {
 
     private fun loadNextShows() {
         todayInterface = TodayRetrofit.getRetrofit().create(TodayInterface::class.java)
-        var call: Call<PopularAll> = todayInterface.getShows(key, language, CURRENT_PAGE)
+        var call: Call<PopularAll> = todayInterface.getShows(Constants.key, language, CURRENT_PAGE)
         call.enqueue(object : Callback<PopularAll>{
             override fun onFailure(call: Call<PopularAll>, t: Throwable) {
                 progressBar.visibility = View.VISIBLE

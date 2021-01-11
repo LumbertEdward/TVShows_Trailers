@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.tvshowstrails.R
 import com.example.tvshowstrails.adapterClasses.GenreDetailAdapter
 import com.example.tvshowstrails.adapterClasses.SeasonAdapter
+import com.example.tvshowstrails.dataClasses.Constants
 import com.example.tvshowstrails.dataClasses.Details
 import com.example.tvshowstrails.dataClasses.Popular
 import com.example.tvshowstrails.interfaceClasses.DetailsInterface
@@ -27,7 +28,6 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class DetailsFragment : Fragment() {
-    private val key: String = "bfb9dfa7c6ccc29b4bdee1ec785dcb7c"
     private val language = "en-US"
     private lateinit var detailsInterface: DetailsInterface
     private lateinit var selectedItemInterface: SelectedItemInterface
@@ -96,7 +96,7 @@ class DetailsFragment : Fragment() {
     private fun getData() {
         var id: Int = popular?.id!!
         detailsInterface = DetailsRetrofit.getRetrofit().create(DetailsInterface::class.java)
-        var call: Call<Details> = detailsInterface.getDetailsData(id, key, language)
+        var call: Call<Details> = detailsInterface.getDetailsData(id, Constants.AllConstants.key, language)
         call.enqueue(object: Callback<Details>{
             override fun onFailure(call: Call<Details>, t: Throwable) {
                 progressBar.visibility = View.VISIBLE

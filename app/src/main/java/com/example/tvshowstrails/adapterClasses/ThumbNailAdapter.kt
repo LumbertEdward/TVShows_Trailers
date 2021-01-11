@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tvshowstrails.R
+import com.example.tvshowstrails.dataClasses.Constants
 import com.example.tvshowstrails.dataClasses.Trailers
 import com.example.tvshowstrails.interfaceClasses.SelectedItemInterface
 import com.google.android.youtube.player.YouTubeInitializationResult
@@ -16,7 +17,6 @@ import com.google.android.youtube.player.YouTubeThumbnailLoader
 import com.google.android.youtube.player.YouTubeThumbnailView
 
 class ThumbNailAdapter(private val context: Context, private val list: ArrayList<Trailers>, private val name: String): RecyclerView.Adapter<RecyclerView.ViewHolder>(){
-    private val key = "AIzaSyCEuBhYMutH-fNlaiJgWNH96NNDhjep8uk"
     private lateinit var selectedItemInterface: SelectedItemInterface
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         var view: View = LayoutInflater.from(context).inflate(R.layout.thumb_item, parent, false)
@@ -30,7 +30,7 @@ class ThumbNailAdapter(private val context: Context, private val list: ArrayList
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         var myViewHolder: MyViewHolder = holder as MyViewHolder
         myViewHolder.textView.text = list[position].name
-        myViewHolder.thumbnailView.initialize(key, object : YouTubeThumbnailView.OnInitializedListener{
+        myViewHolder.thumbnailView.initialize(Constants.YouTubeKey, object : YouTubeThumbnailView.OnInitializedListener{
             override fun onInitializationSuccess(
                 p0: YouTubeThumbnailView?,
                 p12: YouTubeThumbnailLoader?

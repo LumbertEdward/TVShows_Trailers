@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tvshowstrails.R
 import com.example.tvshowstrails.adapterClasses.EpisodesAdapter
+import com.example.tvshowstrails.dataClasses.Constants
 import com.example.tvshowstrails.dataClasses.Episodes
 import com.example.tvshowstrails.dataClasses.EpisodesAll
 import com.example.tvshowstrails.dataClasses.Season
@@ -27,7 +28,6 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class EpisodesFragment : Fragment() {
-    private val key: String = "bfb9dfa7c6ccc29b4bdee1ec785dcb7c"
     private val language = "en-US"
     private val check: String = "CHECK"
     private lateinit var recyclerView: RecyclerView
@@ -75,7 +75,7 @@ class EpisodesFragment : Fragment() {
         var txt: String = numb.toString()
         title.text = "Season $txt"
         episodesInterface = EpisodesRetrofit.getRetrofit().create(EpisodesInterface::class.java)
-        val call: Call<EpisodesAll> = episodesInterface.getEpisodesData(id, numb, key, language)
+        val call: Call<EpisodesAll> = episodesInterface.getEpisodesData(id, numb, Constants.key, language)
         call.enqueue(object : Callback<EpisodesAll>{
             override fun onFailure(call: Call<EpisodesAll>, t: Throwable) {
                 progressBar.visibility = View.VISIBLE

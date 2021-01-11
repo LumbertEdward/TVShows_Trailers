@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.tvshowstrails.R
 import com.example.tvshowstrails.adapterClasses.FrontItemsAdapter
 import com.example.tvshowstrails.adapterClasses.PopHomeAdapter
+import com.example.tvshowstrails.dataClasses.Constants
 import com.example.tvshowstrails.dataClasses.Popular
 import com.example.tvshowstrails.dataClasses.PopularAll
 import com.example.tvshowstrails.interfaceClasses.*
@@ -26,7 +27,6 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class HomeFragment : Fragment() {
-    private val key: String = "bfb9dfa7c6ccc29b4bdee1ec785dcb7c"
     private val language = "en-US"
     private val page = 1
     private lateinit var recyclerViewPop: RecyclerView
@@ -88,7 +88,7 @@ class HomeFragment : Fragment() {
 
     private fun getPopFront() {
         frontPopInterface = FrontPopRet.getRetrofit().create(FrontPopInterface::class.java)
-        var call: Call<PopularAll> = frontPopInterface.getShows(key, language, page)
+        var call: Call<PopularAll> = frontPopInterface.getShows(Constants.key, language, page)
         call.enqueue(object: Callback<PopularAll>{
             override fun onFailure(call: Call<PopularAll>, t: Throwable) {
                 progressBar.visibility = View.VISIBLE
@@ -115,7 +115,7 @@ class HomeFragment : Fragment() {
 
     private fun getAirFront() {
         frontAirInterface = FrontAirRet.getRetrofit().create(FrontAirInterface::class.java)
-        var call: Call<PopularAll> = frontAirInterface.getShows(key, language, page)
+        var call: Call<PopularAll> = frontAirInterface.getShows(Constants.key, language, page)
         call.enqueue(object: Callback<PopularAll>{
             override fun onFailure(call: Call<PopularAll>, t: Throwable) {
                 progressBar.visibility = View.VISIBLE
@@ -141,7 +141,7 @@ class HomeFragment : Fragment() {
 
     private fun getTodayFront() {
         frontTodayInterface = FrontTodayRet.getRetrofit().create(FrontTodayInterface::class.java)
-        var call: Call<PopularAll> = frontTodayInterface.getShows(key, language, page)
+        var call: Call<PopularAll> = frontTodayInterface.getShows(Constants.key, language, page)
         call.enqueue(object : Callback<PopularAll>{
             override fun onFailure(call: Call<PopularAll>, t: Throwable) {
                 progressBar.visibility = View.VISIBLE
@@ -168,7 +168,7 @@ class HomeFragment : Fragment() {
 
     private fun getTopFront() {
         frontTopInterface = FrontTopRet.getRetrofit().create(FrontTopInterface::class.java)
-        var call: Call<PopularAll> = frontTopInterface.getShows(key, language, page)
+        var call: Call<PopularAll> = frontTopInterface.getShows(Constants.key, language, page)
         call.enqueue(object : Callback<PopularAll>{
             override fun onFailure(call: Call<PopularAll>, t: Throwable) {
                 progressBar.visibility = View.VISIBLE

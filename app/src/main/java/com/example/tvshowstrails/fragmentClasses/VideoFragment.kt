@@ -12,6 +12,7 @@ import android.widget.Toast
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import com.example.tvshowstrails.R
+import com.example.tvshowstrails.dataClasses.Constants
 import com.example.tvshowstrails.dataClasses.Trailers
 import com.example.tvshowstrails.interfaceClasses.SelectedItemInterface
 import com.google.android.youtube.player.YouTubeInitializationResult
@@ -20,7 +21,6 @@ import com.google.android.youtube.player.YouTubePlayerSupportFragment
 import com.google.android.youtube.player.YouTubePlayerView
 
 class VideoFragment : Fragment() {
-    private val key = "AIzaSyCEuBhYMutH-fNlaiJgWNH96NNDhjep8uk"
     private lateinit var imageView: ImageView
     private lateinit var textView: TextView
     private var trailers: Trailers? = null
@@ -57,7 +57,7 @@ class VideoFragment : Fragment() {
         val fragmentTransaction: FragmentTransaction = getActivity()!!.supportFragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.frameVideo, youTubePlayerSupportFragment!!)
         fragmentTransaction.commit()
-        youTubePlayerSupportFragment!!.initialize(key, object : YouTubePlayer.OnInitializedListener{
+        youTubePlayerSupportFragment!!.initialize(Constants.YouTubeKey, object : YouTubePlayer.OnInitializedListener{
             override fun onInitializationSuccess(
                 p0: YouTubePlayer.Provider?,
                 p1: YouTubePlayer?,

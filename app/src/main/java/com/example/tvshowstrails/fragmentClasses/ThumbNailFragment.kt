@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tvshowstrails.R
 import com.example.tvshowstrails.adapterClasses.ThumbNailAdapter
+import com.example.tvshowstrails.dataClasses.Constants
 import com.example.tvshowstrails.dataClasses.Popular
 import com.example.tvshowstrails.dataClasses.Trailers
 import com.example.tvshowstrails.dataClasses.TrailersAll
@@ -25,7 +26,6 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class ThumbNailFragment : Fragment() {
-    private val key: String = "bfb9dfa7c6ccc29b4bdee1ec785dcb7c"
     private val language = "en-US"
     private lateinit var imageView: ImageView
     private lateinit var textView: TextView
@@ -71,7 +71,7 @@ class ThumbNailFragment : Fragment() {
         val id: Int = popular!!.id!!
         textView.text = popular!!.name
         trailersInterface = TrailersRetrofit.getRetrofit().create(TrailersInterface::class.java)
-        var call: Call<TrailersAll> = trailersInterface.getTrailersData(id, key, language)
+        var call: Call<TrailersAll> = trailersInterface.getTrailersData(id, Constants.key, language)
         call.enqueue(object : Callback<TrailersAll>{
             override fun onFailure(call: Call<TrailersAll>, t: Throwable) {
                 progressBar.visibility = View.VISIBLE

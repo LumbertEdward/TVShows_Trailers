@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.tvshowstrails.PopularAdapter
 import com.example.tvshowstrails.R
 import com.example.tvshowstrails.adapterClasses.GenreAdapter
+import com.example.tvshowstrails.dataClasses.Constants
 import com.example.tvshowstrails.dataClasses.Genres
 import com.example.tvshowstrails.dataClasses.GenresAll
 import com.example.tvshowstrails.interfaceClasses.GenresInterface
@@ -23,7 +24,6 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class GenresFragment : Fragment() {
-    private val key: String = "bfb9dfa7c6ccc29b4bdee1ec785dcb7c"
     private val language = "en-US"
     private lateinit var recyclerView: RecyclerView
     private lateinit var linearLayoutManager: LinearLayoutManager
@@ -51,7 +51,7 @@ class GenresFragment : Fragment() {
 
     private fun getGenreData() {
         genresInterface = GenresRetrofit.getRetrofit().create(GenresInterface::class.java)
-        var call: Call<GenresAll> = genresInterface.getGenreData(key, language)
+        var call: Call<GenresAll> = genresInterface.getGenreData(Constants.key, language)
         call.enqueue(object : Callback<GenresAll>{
             override fun onFailure(call: Call<GenresAll>, t: Throwable) {
                 progressBar.visibility = View.VISIBLE
